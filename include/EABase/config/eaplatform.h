@@ -456,6 +456,15 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         #error Unknown endianness
     #endif
     #define EA_PLATFORM_DESKTOP
+#elif defined(__CR16C__)
+   #define EA_PLATFORM_UNIX 1
+   #define EA_PLATFORM_NAME "Dialog"
+   #define EA_PLATFORM_DESCRIPTION = "Dialog base processores"
+   #define EA_PROCESSOR_CR16C
+   #define EA_SYSTEM_LITTLE_ENDIAN
+   #define EA_ASM_STYLE_ATT | EA_ASM_STYLE_INTEL | EA_ASM_STYLE_MOTOROLA
+   #define EA_PLATFORM_PTR_SIZE  4
+   #define EA_PLATFORM_WORD_SIZE 2
 
 #else
     #error Unknown platform
